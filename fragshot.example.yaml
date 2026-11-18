@@ -1,0 +1,86 @@
+# FRAGSHOT / BALANCED DEFAULT PROFILE
+# Run: fragshot.exe                 Offline preview: fragshot.exe demo
+# CLI options override YAML. Paths are relative to this file.
+# Copy to fragshot.local.yaml for personal settings, then use --config.
+
+run:
+  mode: scan # scan, check, demo, dictionary_sync, dictionary_import, dictionary_status
+  statuses: [] # empty = all; sale, auction, start_auction, sold, unavailable, unknown
+  show_unavailable: false # checks still retain matching names without offers
+
+budget:
+  max_ton: "100" # exact quoted TON amount; change this before your first live scan
+  reserve_ton: "0" # manually chosen reserve, NOT an automatic fee estimate
+
+scan:
+  markets: [all] # auction/sale baseline; queries can also find start-auction listings
+  sorts: [price_asc, recent, ending] # Fragment catalogue order; price_desc also supported
+  queries: [] # empty = baseline views plus dictionary seeds
+  max_catalog_requests: 32 # distinct batches, never invented page numbers
+  max_detail_requests: 30 # prioritize eligible high-interest names
+  max_results: 100 # display/report cap, NOT a guaranteed number of matches
+  dictionary_queries: 24 # verified query seeds; 0 disables automatic expansion
+
+ranking:
+  sort: interest # local results: interest, price_asc, name_quality
+scoring:
+  # Independent ranking anchors, NOT resale estimates or profit forecasts.
+  # Changing the budget does not change these scores.
+  og_reference_ton: "100"
+  semi_og_reference_ton: "25"
+
+check:
+  names: [] # example: [brain, brainer, alice]
+  file: null # example: usernames.example.txt
+  dictionary: false # never check the entire dictionary automatically
+  max_names: 50
+
+matching:
+  tiers: [og, semi_og]
+  show_non_og: false
+  languages: [en, fr, ru, de, es, it, pt] # lexical data languages; interface stays English
+  # Empty = all categories. Multiple categories use OR matching.
+  # first_name, surname, brand, company, video_game, word, city, food, slang, profanity,
+  # animal, nature, space, technology, science, body, color, time, unknown
+  categories: []
+  include_offensive: true # descriptive labels; false excludes any recorded offensive meaning
+  min_length: 3
+  max_length: 32
+  # English fallback only: one suffix and a verified root. Other languages use source forms.
+  suffixes: [ers, ing, es, er, ed, ly, s]
+  min_root_length: 4
+  overrides: {} # see README for language-tagged local evidence corrections
+
+lexicon: null # optional two-column TSV; see data/extra.example.tsv
+
+dictionary:
+  directory: data/dictionary
+  input: null # required when run.mode is dictionary_import
+  source_url: https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz
+  # Large download is EXPLICIT: fragshot.exe dictionary sync. Never performed by scan.
+  max_compressed_bytes: 4294967296 # 4 GiB
+  max_uncompressed_bytes: 42949672960 # 40 GiB streamed, not all held in memory
+  max_record_bytes: 4194304 # 4 MiB per record
+  timeout_seconds: 7200
+  transliterate: true # keep original spellings and disclose transformations
+  frequency_urls: [] # optional corpus ranking sources; setup is documented in README
+
+network:
+  delay_ms: 1500 # minimum 1000; sequential requests, no automatic bypass or retries
+  timeout_seconds: 20
+
+console:
+  color: auto # auto, always, never; auto respects NO_COLOR
+  banner: true
+  progress: true
+
+alerts:
+  console_matches: true # local highlighting, no external messages
+  bell: false
+
+results:
+  enabled: true
+  directory: results
+  grouping: [language, category] # one username.txt per run; all meanings retained inside
+  json: null # optional export path; existing files are never overwritten
+  csv: null

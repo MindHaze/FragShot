@@ -1,0 +1,12 @@
+/target/
+/fragshot.exe
+/fragshot.toml
+/results*.json
+/results*.csv
+/demo-results.json
+/demo-results.csv
+/results/
+/data/dictionary/
+/data/imports/
+/*.local.yaml
+*.tmp

@@ -1,0 +1,7 @@
+# One username per line, with or without @; duplicates are removed.
+alice
+romain
+mario
+paris
+nike
+moon

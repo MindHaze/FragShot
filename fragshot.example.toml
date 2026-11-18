@@ -1,0 +1,31 @@
+# Legacy compatibility example. Prefer fragshot.yaml for all current settings.
+# Select explicitly: fragshot.exe --config fragshot.example.toml demo
+# Amounts are exact quoted TON strings; CLI options override this file.
+max_ton = "100"
+reserve_ton = "0"
+
+# Empty = all categories. Multiple categories use OR matching.
+# first_name, surname, brand, video_game, word, city, unknown
+categories = []
+# true = strict OG only; false also allows semi-OG by default.
+og_only = false
+
+# Empty = all statuses. TOML uses start_auction with an underscore.
+# sale, auction, start_auction, sold, unavailable, unknown
+statuses = []
+# scan/demo only; check retains names passing lexical and status filters.
+show_unavailable = false
+min_length = 3
+max_length = 32
+
+# scan: maximum displayed results.
+# check: maximum requested names after name/category filtering.
+limit = 50
+# scan only: maximum number of detailed pages reread (0 to 100).
+details = 20
+# Minimum delay: 1000 ms; requests are never parallelized.
+delay_ms = 1500
+timeout_seconds = 20
+
+# Additional TSV lexicon; paths are relative to this TOML file.
+# lexicon = "data/extra.example.tsv"

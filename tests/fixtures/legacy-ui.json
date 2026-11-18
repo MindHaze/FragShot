@@ -1,0 +1,7 @@
+{
+  "purpose": "Rejected historical labels used only by English-output regression tests, never by the application interface.",
+  "status_labels": ["ACHAT", "ENCHÉR", "VENDU", "INDISPONIBLE"],
+  "budget_labels": ["dans le budget", "HORS BUDGET"],
+  "category_tokens": ["prenom", "marque", "jeu_video", "inconnu", "ville"],
+  "error_words": ["Fournir", "Erreur"]
+}

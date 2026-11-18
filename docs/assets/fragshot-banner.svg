@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">FragShot</title>
+  <desc id="desc">Read-only username discovery. A terminal-inspired banner with a geometric targeting mark, cyan and lime accents, and the words Discover, Classify, Compare.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#20313f" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ce1e6"/>
+      <stop offset="1" stop-color="#c0ff72"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="380" rx="20" fill="#0b121a"/>
+  <rect x="760" y="1" width="439" height="378" rx="20" fill="url(#grid)" opacity="0.7"/>
+  <rect x="1" y="1" width="1198" height="378" rx="19" fill="none" stroke="#273744"/>
+  <path d="M 40 56 H 1160" stroke="#273744"/>
+  <circle cx="48" cy="30" r="5" fill="#5ce1e6"/>
+  <circle cx="68" cy="30" r="5" fill="#c0ff72"/>
+  <circle cx="88" cy="30" r="5" fill="#536579"/>
+  <text x="116" y="35" fill="#a5b5c6" font-family="Consolas, monospace" font-size="13" letter-spacing="2">FRAGSHOT / USERNAME INTELLIGENCE</text>
+  <text x="58" y="106" fill="#c0ff72" font-family="Consolas, monospace" font-size="13" letter-spacing="3">DISCOVER. CLASSIFY. COMPARE.</text>
+  <text x="53" y="204" fill="#f3f8fc" font-family="Segoe UI, Arial, sans-serif" font-size="100" font-weight="800" letter-spacing="-4">FRAG<tspan fill="#5ce1e6">SHOT</tspan></text>
+  <rect x="60" y="225" width="72" height="4" rx="2" fill="url(#accent)"/>
+  <text x="59" y="268" fill="#a5b5c6" font-family="Segoe UI, Arial, sans-serif" font-size="22">Find the name. Understand the offer.</text>
+  <text x="60" y="330" fill="#c0ff72" font-family="Consolas, monospace" font-size="14">RUST CLI</text>
+  <text x="174" y="330" fill="#536579" font-family="Consolas, monospace" font-size="14">/</text>
+  <text x="200" y="330" fill="#a5b5c6" font-family="Consolas, monospace" font-size="14">YAML FIRST</text>
+  <text x="329" y="330" fill="#536579" font-family="Consolas, monospace" font-size="14">/</text>
+  <text x="356" y="330" fill="#a5b5c6" font-family="Consolas, monospace" font-size="14">READ ONLY</text>
+  <g transform="translate(970 204)" fill="none">
+    <circle r="108" stroke="#293e4d"/>
+    <circle r="77" stroke="#5ce1e6" stroke-width="2" stroke-dasharray="64 57"/>
+    <circle r="47" stroke="#345465"/>
+    <path d="M -132 0 H -92 M 92 0 H 132 M 0 -132 V -92 M 0 92 V 132" stroke="#5ce1e6" stroke-width="2"/>
+    <path d="M -25 -22 H 26 V -5 H -7 V 8 H 18 V 25 H -7 V 43 H -25 Z" fill="#c0ff72"/>
+    <path d="M 17 -40 H 42 V -15" stroke="#c0ff72" stroke-width="4"/>
+  </g>
+</svg>

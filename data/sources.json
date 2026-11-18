@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "verified_on": "2026-11-18",
+  "dictionary": {
+    "provider": "Kaikki / Wiktionary / Wiktextract",
+    "index": "https://kaikki.org/dictionary/rawdata.html",
+    "download": "https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz",
+    "advertised_extraction_date": "2026-10-01",
+    "advertised_compressed_size": "2.9 GB",
+    "advertised_uncompressed_size": "24.8 GB",
+    "edition": "English Wiktionary; entry languages determined by lang_code",
+    "notice": "THIRD_PARTY.md",
+    "revision_note": "The provider URL is rolling, not an immutable release. Installed import time and source are recorded in data/dictionary/current.json."
+  },
+  "frequency": {
+    "provider": "FrequencyWords / OPUS OpenSubtitles2018",
+    "repository": "https://github.com/hermitdave/FrequencyWords",
+    "verified_languages": ["en", "fr", "ru", "de", "es", "it", "pt"],
+    "pattern": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/{language}/{language}_50k.txt",
+    "verification": "All seven compact files returned HTTP 200 on the verification date.",
+    "license": "CC BY-SA 4.0 data; MIT generation code",
+    "purpose": "Rank existing dictionary names only; never establish lexical validity."
+  }
+}
